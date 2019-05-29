@@ -145,3 +145,23 @@ function change_submenu_class($menu) {
 add_filter('wp_nav_menu','change_submenu_class');  
 </code>
 </pre>
+<h3>Bootstrap collapse menu with WordPress menu</h3>
+<pre><code class="prettyprint prettyprinted" style=""><span class="pun">&lt;?</span><span class="pln">php
+wp_nav_menu</span><span class="pun">(</span><span class="pln"> array</span><span class="pun">(</span><span class="pln"> 
+</span><span class="str">'menu'</span><span class="pln">              </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'main-menu'</span><span class="pun">,</span><span class="pln"> 
+</span><span class="str">'container_class'</span><span class="pln">   </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'navbar-content nav-collapse collapse'</span><span class="pun">,</span><span class="pln"> 
+</span><span class="str">'menu_class'</span><span class="pln">        </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'nav nav-tabs pull-right'</span><span class="pun">,</span><span class="pln"> 
+</span><span class="str">'menu_id'</span><span class="pln">           </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'main-menu'</span><span class="pln"> </span><span class="pun">)</span><span class="pln"> 
+</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">?&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;script&gt;</span><span class="pln">
+    $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"ul.sub-menu"</span><span class="pun">).</span><span class="pln">parent</span><span class="pun">().</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">"dropdown"</span><span class="pun">);</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"ul.sub-menu"</span><span class="pun">).</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">"dropdown-menu"</span><span class="pun">);</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"ul#main-menu li.dropdown a"</span><span class="pun">).</span><span class="pln">addClass</span><span class="pun">(</span><span class="str">"dropdown-toggle"</span><span class="pun">);</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">"ul.sub-menu li a"</span><span class="pun">).</span><span class="pln">removeClass</span><span class="pun">(</span><span class="str">"dropdown-toggle"</span><span class="pun">);</span><span class="pln"> 
+        $</span><span class="pun">(</span><span class="str">'.navbar .dropdown-toggle'</span><span class="pun">).</span><span class="pln">append</span><span class="pun">(</span><span class="str">'&lt;b class="caret"&gt;&lt;/b&gt;'</span><span class="pun">);</span><span class="pln">
+        $</span><span class="pun">(</span><span class="str">'a.dropdown-toggle'</span><span class="pun">).</span><span class="pln">attr</span><span class="pun">(</span><span class="str">'data-toggle'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'dropdown'</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">});</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></code></pre>
