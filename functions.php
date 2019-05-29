@@ -44,7 +44,7 @@ if ( ! function_exists( 'ucorpa_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'ucorpa' ),
+			'main-menu' => esc_html__( 'Primary', 'ucorpa' ),
 		) );
 
 		/*
@@ -201,6 +201,12 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Customizer Menu.
+ */
+require get_template_directory() . '/inc/menu.php';
+
 
 /**
  * Load Jetpack compatibility file.
