@@ -96,7 +96,8 @@
                         <div class="col-md-12 col-sm-12">
                             <nav class="navbar navbar-default">
                                 <div class="collapse navbar-collapse">
-                                    <ul id="nav" class="nav mobile-menu navbar-nav">
+                                <?php ucorpa_nav_menu();?>
+                                    <!-- <ul id="nav" class="nav mobile-menu navbar-nav">
                                         <li class="current"><a href="index-2.html">home</a>
                                             <ul class="dropdown">
                                                 <li><a href="index-2.html">homepage default</a></li>
@@ -131,7 +132,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">contact us</a></li>
-                                    </ul>
+                                    </ul> -->
                                     <div class="right-bar">
                                         <!-- search form -->
                                         <div class="search-top">
